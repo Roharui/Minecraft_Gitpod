@@ -1,0 +1,6 @@
+api: ""
+name: Gitpod
+version: 1.0
+description: Podding
+
+main: minecraft.App
