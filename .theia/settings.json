@@ -6,5 +6,6 @@
         "**/.factorypath": true
     },
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.dependency.packagePresentation": "flat"
+    "java.dependency.packagePresentation": "flat",
+    "java.dependency.syncWithFolderExplorer": false
 }

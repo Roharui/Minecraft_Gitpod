@@ -61,6 +61,21 @@
         </plugin>
         <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.0.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.pod.mc.App</mainClass>
+                        <addClasspath>true</addClasspath>
+                        <addExtensions>true</addExtensions>
+                        <packageName>com.pod.mc</packageName>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+        <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>
         </plugin>
