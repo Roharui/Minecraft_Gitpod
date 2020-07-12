@@ -1,0 +1,6 @@
+api: ""
+name: Pod
+version: 1.0
+description: My First Minecraft Plugin
+
+main: com.podding.App
