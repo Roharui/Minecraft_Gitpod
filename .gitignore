@@ -58,4 +58,9 @@ buildNumber.properties
 # End of https://www.toptal.com/developers/gitignore/api/maven,java,linux
 
 Server/*
+
+!Server/run.sh
+
 ngrok/*
+
+!ngrok/run.sh
