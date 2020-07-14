@@ -33,6 +33,16 @@ public class BaseCommand {
         Method m = this.commandMap.get(cmd);
 
         if(m == null){
+            notFound(p);
+            return false;
+        }
+
+        if(p.isOp()){
+            m.invoke(this, p);
+            return true;
+        }
+
+        if(m.getAnnotation(CommandArgs.class).op()){
             return false;
         }
 
@@ -42,9 +52,13 @@ public class BaseCommand {
 
     void empty(Player p){  }
 
+    void notFound(Player p){  }
+
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
     @interface CommandArgs {
         String args();
+        String permission() default "None";
+        boolean op() default false;
     }
 }

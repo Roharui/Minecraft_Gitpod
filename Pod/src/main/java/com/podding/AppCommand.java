@@ -26,6 +26,8 @@ public class AppCommand implements CommandExecutor {
             }
 
         }
+
+        // Console only
         else
         {
             sender.sendMessage("Console only!");
